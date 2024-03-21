@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table,Forms,Input,CheckBox,Radio,Select,Range,TextArea</title>
+</head>
+<body>
+    <table> <!-- Tables are used to represent real life table data. -->
+        <caption>Food Menu</caption> <!-- Defines the table caption -->
+        <tr> <!-- Used to display table row -->
+            <th>Item</th> <!-- Used to display table header -->
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Frooti</td> <!-- Used to display table data -->
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Samosa</td>
+            <td>12</td>
+        </tr>
+    </table>
+
+    <!-- Table Semantic : <thead>,<tbody>,<tfoot> -->
+    <table border="black"> <!-- border="black" not reccomended -->
+        <caption>Food Menu </caption>
+        <thead> <!-- To wrap Table header -->
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody> <!-- To wrap Table body -->
+            <tr>
+                <td>Frooti</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Samosa</td>
+                <td>12</td>
+            </tr>
+        </tbody>
+        <tfoot> <!-- To wrap Table footer -->
+            <th>Sum</th>
+            <th>22Rs</th>
+        </tfoot>
+    </table>
+
+    <!--Colspan and Rowspan is used to create cells which spans over multiple rows or columns -->
+    <table border="black"> <!-- border="black" not reccomended -->
+        <caption>Food Menu </caption>
+        <thead> <!-- To wrap Table header -->
+            <tr>
+                <th rowspan="2">Item</th>
+                <th colspan="2">Price</th>
+            </tr>
+            <tr>
+                <th>INR</th>
+                <th>USD</th>
+            </tr>
+        </thead>
+        <tbody> <!-- To wrap Table body -->
+            <tr>
+                <td>Frooti</td>
+                <td>10</td>
+                <td>0.14</td>
+            </tr>
+            <tr>
+                <td>Samosa</td>
+                <td>12</td>
+                <td>0.17</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <!-- Forms : Forms are used to collect data from the user. -->
+    <form action="/server"> <!-- action attribute is used to define what action needs to be performed when a form is submitted or where the form data should be sent. -->
+        <!-- input is used to create multiple form controls. -->
+        Text <input type="text">  <!-- The type attribute specifies the type of <input> element to display. -->
+        <br>
+        Password <input type="password" placeholder="Enter Password"> <!-- The Placeholder attribute specifies a short hint that describes the expected value of input field. -->
+        <br>
+        <label> <!-- Label element represent a caption for an item in an user interface. -->
+            Age <input type="number" placeholder="Enter Age">
+        </label>
+        <br>
+
+        <!-- Classical Approach -->
+        <!-- Make connection of label (for="username") and input(id="username") -->
+        <label for="username">Enter Username:</label>
+        <input type="text" id="username">
+        <br>
+        <button>Submit</button> <!-- It defines a clickable button -->
+        <br>
+        <!-- Three types of button -->
+        <button type="submit">Submit</button> <!-- Rendered page in form of using action attribute -->
+        <button type="button">Button</button> <!-- It is not rendered page , it is an normal button -->
+        <button type="reset">Reset</button><br> <!-- It reset all the input fields of form -->
+
+        <!-- Button using input -->
+        <input type="submit" value="Click Me">
+    </form>
+    <hr>
+
+    <form action="https://www.youtube.com/results">
+        <input type="text" placeholder="Search in Youtube" name="search_query"> <!-- Name Attribute the name of the form control.Submitted with the form as part of name/value pair. -->
+        <button type="submit">Submit</button>
+    </form>
+    <hr>
+
+    <form action="/server">
+        <input type="checkbox" name="age" id="age"> <!-- The checkbox is shown as square box that is ticked(checked) when activated-->
+        <label for="age">I am 18+</label><br>
+
+        <input type="checkbox" name="kid" id="kid" checked> <!-- checked: the default behaviour of checkbox is checked -->
+        <label for="age">I am below 18</label><br>
+
+        <div>
+            <!-- Radio : Radio buttons normally presented in radio groups.Only one radio button in a group can be selected at the same time.The radio group must share the same name(the value of name attribute) to be treated as group. -->
+            <input type="radio" name="fruit" id="app" value="apple"> <!-- Radio group is name="fruit". For submit data to action="/server" we use value attr to specify which radio button is selected -->
+            <label for="app">Apple</label>
+            <input type="radio" name="fruit" id="mang" value="mango"> <!-- Radio group is name="fruit". For submit data to action="/server" we use value attr to specify which radio button is selected -->
+            <label for="mang">Mango</label>
+            <input type="radio" name="fruit" id="bana" value="banana"> <!-- Radio group is name="fruit". For submit data to action="/server" we use value attr to specify which radio button is selected -->
+            <label for="bana">Banana</label>
+        </div>
+
+        <div>
+            <select name="profession" id="profession"> <!-- The <select> element is used to create a drop-down list.It most used in a form, to collect user input.The name attribute is needed to reference the form data after the form is submitted-->
+                <option>Select Your Option</option> <!-- The <option> element define the available options in the drop-down list. -->
+                <option value="stu" selected>Student</option> <!-- Using selected the default option is selected as Student-->
+                <option value="dev">Developer</option>
+            </select>
+        </div>
+
+        <div>
+            <!-- Range : It is like a slider control. -->
+            <!-- Range attribute : max:specifies the maximum value , min:specifies the minimum value , step:specifies the legal number interval , value:specifies the default value . -->
+            <label for="vol">Select your volume level:</label>
+            <input type="range" id="vol" name="volume" min="0" max="50" step="10" value="30">
+        </div>
+
+        <div>
+            <label for="feedback">Please give your valuable feedback : </label>
+            <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea> <!-- The <textarea> tag defines a multi-line text input control.The size of a text area is specified by the cols and rows attributes (or with CSS) -->
+        </div>
+
+        <button>Submit</button>
+    </form>
+
+
+</body>
+</html>
