@@ -25,9 +25,9 @@ To begin learning HTML, you can follow these steps:
    ```
     - Understand HTML elements, tags, and attributes.
 3. **Resources:**
-    - Mozilla Developer Network (MDN) HTML Documentation
-    - W3Schools HTML Tutorial
-    - FreeCodeCamp HTML Tutorial
+    - [Mozilla Developer Network (MDN) HTML Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML) 
+    - [W3Schools HTML Documentation](https://www.w3schools.com/html/default.asp)
+    - [FreeCodeCamp HTML Documentation](https://www.freecodecamp.org/news/the-html-handbook/)
     
 4. **Practice:**
     - Create simple HTML documents.
