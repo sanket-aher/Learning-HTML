@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline vs Block Elements,Div Elements,Span Elements,Hr Tag,SUb and Sup tag,Semantic tags,HTML Entities</title>
+</head>
+<body>
+    <!-- Inline Vs Block-->
+    <!-- Block Elements :- Takes up the full width available.Start from new line Ex div,p,etc -->
+    <!-- Inline Elements :- Takes up the only necessary width .Dont Start from new line Ex span,a,img,etc -->
+
+    <div> <!-- Div is the container used to hold other HTML elements or group elements together.It is block Elements -->
+        <a href="www.google.com">Google</a>
+        <a href="www.youtube.com">Youtube</a>
+    </div>
+    <a href="www.facebook.com">Facebook</a>
+
+    <!-- Span is also a generic container used to hold other HTML elements or group elements together.It is Inline Elements -->
+    <span>
+        <a href="www.google.com">Google</a>
+        <a href="www.youtube.com">Youtube</a>
+    </span>
+    <a href="www.facebook.com">Facebook</a>
+
+    <hr><!-- Horizontal Rule Element-->
+
+    <h1>a<sup>2</sup>=b<sup>2</sup>+c<sup>2</sup></h1>  <!--SuperScript-->
+    <h1>H<sub>2</sub>O</h1> <!--SubScript-->
+
+    <!-- Semantic Markup : It is markup that relates to the meaning of content. Advantage: 1)Readable 2)Search Engine Friendly 3)Structured Layout  -->
+    <!-- Semantic Tags/Markup are <header></header>,<main></main>,<footer></footer>,<nav></nav>,<article></article>,<section></section>,<aside></aside> -->
+
+    <header>
+        <h2>This is a Header</h2>
+        <nav>
+            <a href="www.google.com">Google</a>
+            <a href="www.youtube.com">Youtube</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h3>Education Section:</h3>
+            <p>10th:70%</p>
+        </section>
+        <section>
+            <h3>Skills Section:</h3>
+            <p>C,C++,Java</p>
+        </section>
+    </main>
+    <footer>
+        <h3>Contact Me</h3>
+    </footer>
+
+    <!-- HTML Entities : An HTML Entity is a piece of text that begin with an ampersand(&) and ends with an semicolon(;).Used to display reserved characters(<,&,etc) and invisble character(non-breaking space).Some of characters that are difficult to type with a standard keyboard (Heart,arrow,etc) -->
+    <h1>a&lt;b</h1>
+    <p>Home Sweet &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Home</p>
+    <h1>this is &bigstar;</h1> 
+    <h1>this is &#9733;</h1> <!-- Decimal Format-->
+    <h1>The Sky is cloudly &#9729; &amp; it will rain &#9748; today.</h1>
+
+
+
+</body>
+</html>
